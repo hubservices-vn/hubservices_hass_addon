@@ -11,4 +11,4 @@ RUN chmod 0644 /data/auto_update.py
 
 WORKDIR /data
 
-CMD [ "python3", "/data/auto_update.py"]
+CMD [ "python3", "auto_update.py"]
