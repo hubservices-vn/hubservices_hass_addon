@@ -3,7 +3,8 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 #Add nginx and create the run folder for nginx.
-RUN apt-get update && apt-get -y install cron python3;
+RUN apt-get update && apt-get -y install cron;
+RUN apt-get -y install python3;
 
 COPY rootfs /
 
