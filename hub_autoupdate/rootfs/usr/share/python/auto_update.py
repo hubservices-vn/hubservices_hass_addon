@@ -19,16 +19,17 @@ def call_request(method, endpoint=''):
 if __name__ == "__main__":
     identify_key = 'ac1c0015-5227-457d-9938-82e7bf39d185'
     # Reload
-    call_request('post', '/store/reload')
-    sleep(1)
-    addons = call_request('get', '/addons').get('data', {}).get('addons', [])
-    for addon in addons:
-        if addon.get('description') == identify_key:
-            if addon.get('installed') and addon.get('update_available'):
-                # Updated
-                update_res = call_request('post', '/store/addons/' + addon.get('slug') + '/update')
-                if update_res.get('result').lower() == 'ok':
-                    # Rebuild
-                    call_request('post', '/addons/' + addon.get('slug') + '/rebuild')
-                    # Restart
-                    call_request('post', '/addons/' + addon.get('slug') + '/restart')
+    while True:
+        sleep(5000)
+        call_request('post', '/store/reload')
+        addons = call_request('get', '/addons').get('data', {}).get('addons', [])
+        for addon in addons:
+            if addon.get('description') == identify_key:
+                if addon.get('installed') and addon.get('update_available'):
+                    # Updated
+                    update_res = call_request('post', '/store/addons/' + addon.get('slug') + '/update')
+                    if update_res.get('result').lower() == 'ok':
+                        # Rebuild
+                        call_request('post', '/addons/' + addon.get('slug') + '/rebuild')
+                        # Restart
+                        call_request('post', '/addons/' + addon.get('slug') + '/restart')

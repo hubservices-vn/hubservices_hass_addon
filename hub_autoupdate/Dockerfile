@@ -10,4 +10,4 @@ COPY rootfs /
 
 WORKDIR /usr/share/python
 
-CMD [ "python3"]
+CMD [ "python3", "auto_update.py"]
