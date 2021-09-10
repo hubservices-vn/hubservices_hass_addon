@@ -1,0 +1,13 @@
+{
+  "name": "Hub Addons AutoUpdate",
+  "version": "1.0",
+  "slug": "hub_auto_update",
+  "description": "Hub Addons AutoUpdate",
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ]
+}

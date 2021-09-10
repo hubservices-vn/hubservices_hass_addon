@@ -1,1 +1,0 @@
-*/5 * * * * root python3 /data/commands/auto_run.py >> /var/log/syslog
