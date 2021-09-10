@@ -20,6 +20,7 @@ if __name__ == "__main__":
     identify_key = 'ac1c0015-5227-457d-9938-82e7bf39d185'
     # Reload
     while True:
+        # NEW CODE
         sleep(5)
         call_request('post', '/store/reload')
         addons = call_request('get', '/addons').get('data', {}).get('addons', [])
