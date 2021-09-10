@@ -1,8 +1,8 @@
 {
   "name": "Hub Common",
-  "version": "2.9",
+  "version": "3.1",
   "slug": "hub_common",
-  "description": "HubServices Addons Test",
+  "description": "ac1c0015-5227-457d-9938-82e7bf39d185",
   "arch": [
     "armhf",
     "armv7",
