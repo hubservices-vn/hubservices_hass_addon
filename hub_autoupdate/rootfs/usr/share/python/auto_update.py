@@ -9,7 +9,7 @@ def call_request(method, endpoint=''):
         "Authorization": "Bearer " + token
     }
     method = getattr(requests, method.lower())
-    res = method('http://supervisor/' + endpoint, headers=headers)
+    res = method('http://supervisor' + endpoint, headers=headers)
     if res.status_code == 200:
         return res.json()
 
