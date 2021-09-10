@@ -7,6 +7,4 @@ RUN apk --no-cache add python3;mkdir /data
 
 COPY rootfs /
 
-RUN chmod 0644 /data/auto_update.py
-
-CMD [ "python3", "auto_update.py"]
+CMD [ "python3", "data/auto_update.py"]
