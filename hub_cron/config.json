@@ -1,0 +1,13 @@
+{
+  "name": "Hub Cron",
+  "version": "1.0",
+  "slug": "hub_cron",
+  "description": "HubServices Addons Cron",
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ]
+}
